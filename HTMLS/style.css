@@ -1,0 +1,266 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "poppins", sans-serif;
+}
+
+.hero{
+    width: 100;
+    min-height: 100vh;
+    background-image:linear-gradient(rgba(20, 158, 124, 0.3),rgba(22, 10, 133, 0.664));
+    position: relative;
+    padding: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+nav{
+    width: 100%;
+    position:absolute;
+    top: 0;
+    left: 0;
+    padding: 20px 8%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.322)
+
+}
+nav .logo{
+    width: 30px;
+    margin-right:auto;
+}
+.user-pic{
+    width: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-left: 30px;
+}
+.about{
+    position: absolute;
+    top: 100%;
+    right: 20%;
+    width:320px;
+    max-height: 0px;
+    overflow: hidden;
+    transition: max-height 0.5s;
+    background: rgba(244, 245, 247, 0.986);
+    color: rgb(1, 10, 10);
+}
+.about.open{
+    max-height: 400px;
+}
+.sub-menu-wrap{
+    position: absolute;
+    top: 100%;
+    right: 0%;
+    width:320px;
+    max-height: 0px;
+    overflow: hidden;
+    transition: max-height 0.5s;
+  
+}
+.sub-menu-wrap.open-menu{
+    max-height: 400px;
+}
+.sub-menu{
+    background: rgba(241, 244, 247, 0.541);
+    padding: 20px;
+    margin: 10px;
+
+}
+.user-info{
+    display: flex;
+    align-items: center;
+}
+.user-info h3{
+    font-weight: 500;
+}
+.user-info img{
+    
+    border-radius: 50%;
+   
+    width: 40px;
+    border-radius: 50%;
+
+}
+.user-info hr{
+    border: 0;
+    height: 1px;
+    width: 100%;
+    background: #ccc;
+    margin: 15px 0 10px;
+}
+.sub-menu-link{
+display: flex;
+align-items: center;
+text-decoration: none;
+color: #111111;
+margin: 12px 0;
+}
+.sub-menu-link p{
+    width: 100%;
+}
+.sub-menu-link:hover p{
+    transform:translate(5px);
+}
+.sub-menu-link img{
+    
+   
+    width: 40px;
+    border-radius: 50%;
+    padding: 8px;
+    margin-right: 15px;
+    background: #e5e5e5;
+}
+.sub-menu-link span{
+    font-size: 22px;
+    transition: transform 0.5s;
+}
+.sub-menu-link:hover span{
+    transform:translate(5px);
+}
+nav ul li{
+    list-style: none;
+    display:inline-flex;
+    margin-left: 40px;
+}
+nav ul li a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 17px;
+    font-family: 'Courier New', Courier, monospace;
+}
+.content{
+    text-align: center;
+}
+.content h1{
+    font-size: 130px;
+    color: #fff;;
+    font-weight: 600;
+    transition: 0.5s;
+}
+.content h1:hover{
+    -webkit-text-stroke:2px #fff ;
+    color:transparent;
+
+}
+
+
+
+
+.content a{
+    text-decoration: none;
+    display: inline-block;
+    color: #fff;
+    font-size: 24px;
+    border: 2px solid #fff;
+    padding: 14px 70px;
+    border-radius: 50px;
+    margin-top: 20px;
+
+}
+.back-video{
+ position:absolute ;
+ right: 0;
+ bottom: 0;
+ z-index: -1;   
+}
+@media (min-aspect-ratio:16/9){
+    .back-video{
+        width: 100%;
+        height: auto;
+    }
+}
+@media (max-aspect-ratio:16/9){
+    .back-video{  
+        width: auto;
+        height: 100%;
+    }
+}
+.wrapper{
+    width: 450px;
+    overflow: hidden;
+    padding: 28px;
+    border-radius: 8px;
+    background: #fff;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+}
+.wrapper .pass-field {
+    height: 65px;
+    width: 100%;
+    position: relative;
+}
+.pass-field input{
+    width: 100%;
+    height: 100%;
+    outline: none;
+    padding: 0 17px;
+    font-size: 1.3rem;
+    border-radius: 5px;
+    border: 1px solid #999;
+}
+.pass-field input:focus{
+    padding:0 16px;
+    border: 2px solid #4285F4;
+
+}
+.pass-field i{
+    right: 18px;
+    top: 50%;
+    font-size: 1.2rem;
+    color: #999;
+    cursor: pointer;
+    position: absolute;
+    transform: translateY(-50%);
+
+}
+.wrapper .content{margin: 20px 0 10px;}
+.content{
+    color: #333;
+    font-size: 1.3rem;
+
+}
+.content .requirement-list {
+    margin-top: 20px;
+}
+.requirement-list li{
+    font-size: 1.3rem;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+.requirement-list li i{
+    width: 20px;
+    color: #aaa;
+    font-size: 0.6rem;
+}
+.requirement-list li.valid i{
+    font-size: 1.2rem;
+    color: #4285F4;
+}
+.requirement-list li span{
+    margin-left: 12px;
+    color: #333;
+}
+.requirement-list li.valid span{
+    color: #999;
+}
+@media screen and (max-width: 500px){body, .wrapper{
+padding: 15px;
+}
+    .wrapper .pass-field{
+        height: 55px;
+    }
+    .pass-field input, .content p{
+        font-size: 1.15rem;
+    }
+    .pass-field i, .requirement-list li{
+        font-size: 1.1rem;
+    }
+    .requirement-list li span{
+        margin-left: 7px;
+    }
+}
